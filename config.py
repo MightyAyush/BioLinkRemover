@@ -31,13 +31,13 @@ API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 OWNER_ID = get_env_int("OWNER_ID")
-SUDO_USERS = get_env_list("SUDO_USERS", [])
+SUDO_USERS = [OWNER_ID] #Add more sudo users to give access of gcast, ucast
 
 MONGO_DB = os.getenv("MONGO_DB")
-MONGODB_DB_NAME = os.getenv("MONGODB_DB_NAME", "BioLinkProtections")
+MONGODB_DB_NAME = os.getenv("MONGODB_DB_NAME", "BioLinkRemover")
 
 LOGGER_GROUP = get_env_int("LOGGER_GROUP")
-DATABASE_CHANNEL = get_env_int("DATABASE_CHANNEL")
+DATABASE_CHANNEL = LOGGER_GROUP
 
 DIRTY_WORDS = [
     "pussy", "porn", "xxx", "sex", "crypto double", "earn free btc", 
